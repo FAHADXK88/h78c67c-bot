@@ -1,0 +1,22 @@
+{
+  "name": "h78c67c-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "task1": "node ./task-sars-cov2/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "mwn": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0"
+  }
+}
