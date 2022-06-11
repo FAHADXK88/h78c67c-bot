@@ -1,8 +1,6 @@
-import { mwn } from 'mwn';
 import axios from 'axios';
-import { config } from 'dotenv';
-import { enMonthsToHani, matchWorldwide } from './util';
-config();
+import { enMonthsToHani, matchWorldwide } from './util.js';
+import { init } from '../common/bot.js';
 
 async function getSource(title) {
     return await axios.get('https://en.wikipedia.org/w/api.php', {
@@ -19,12 +17,7 @@ async function getSource(title) {
 }
 
 (async function() {
-    const bot = await mwn.init({
-        apiUrl: process.env.APIURL,
-        username: process.env.USERNAME,
-        password: process.env.PASSWORD,
-        userAgent: 'h78c67c-bot/1.0.0 (User h78c67c) mwn/1.11.4',
-    });
+    const bot = await init({});
     await worldwide(bot);
 })();
 
@@ -52,6 +45,6 @@ async function worldwide(bot){
 [[Category:武漢肺炎疫情模]]
 </noinclude>
 `;
-    await bot.save('Template:武漢肺炎病例總數', output, '更新').catch(e => console.error(`Error saving page: ${e}`));
-    console.log('worldwide end');
+    await bot.save('Template:武漢肺炎病例總數', output, '[[User:H78c67c-bot|工作1]]：更新武漢肺炎數據').catch(e => console.error(`Error saving page: ${e}`));
+    console.log('Task 1 worldwide end');
 }

@@ -2,10 +2,11 @@
   "name": "h78c67c-bot",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "task1": "node ./task-sars-cov2/index.js",
+    "task1": "node ./task1/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
