@@ -15,7 +15,7 @@ function genText(data) {
  |confirmed   = ${data.cases.global}
  |deaths      = ${data.deaths.global}
  |date        = ${formattedDate}
- |time        = ${date.getUTCHours().padStart(2, '0')}:${date.getUTCMinutes()} UTC
+ |time        = ${date.getUTCHours().toString().padStart(2, '0')}:${date.getUTCMinutes()} UTC
  |type        = {{{1}}}
 }}<!-- *** For consistency, simplicity and credibility, we kindly ask to source ONLY from Johns Hopkins University.
  *** Please refer to the Talk Page for more information.
