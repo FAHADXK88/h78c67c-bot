@@ -30,7 +30,7 @@ function genText(data) {
 async function worldwide(bot){
     const data = await fetchJHUData();
     const output = genText(data);
-    await bot.save('Template:武漢肺炎病例總數', output, '[[User:H78c67c-bot|工作1]]：更新武漢肺炎數據').catch(e => console.error(`Error saving page: ${e}`));
+    await bot.save('Template:武漢肺炎病例總數', output, '[[User:H78c67c-bot/tasks/1|工作1]]：更新武漢肺炎數據').catch(e => console.error(`Error saving page: ${e}`));
     console.log('Task 1 worldwide end');
 }
 

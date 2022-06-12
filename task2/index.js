@@ -40,6 +40,6 @@ async function fetchOWIDData() {
 (async function() {
     const bot = await init({});
     const data = await fetchOWIDData();
-    await bot.save('Template:武漢肺炎數據/data', data, '[[User:H78c67c-bot|工作1]]：更新武漢肺炎數據').catch(e => console.error(`Error saving page: ${e}`));
+    await bot.save('Template:武漢肺炎數據/data', data, '[[User:H78c67c-bot/tasks/1|工作1]]：更新武漢肺炎數據').catch(e => console.error(`Error saving page: ${e}`));
     console.log('Task 2 data end');
 })();
