@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { init } from '../common/bot.js';
-import locations from './locations.json';
+import locations from './locations.json' assert { type: "json" };
 
 const strcmp = (a, b) => (a < b ? -1 : (a > b ? 1 : 0));
 
